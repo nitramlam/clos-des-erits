@@ -1,0 +1,177 @@
+* {
+  font-family: "olivia";
+}
+body {
+  margin: 0;
+  padding: 0;
+
+  cursor: url("../sourisnoir.png"), auto;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2%;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 900px;
+  max-height: 300px;
+  font-weight: bold;
+}
+.logo {
+  transition: transform 0.5s ease-in-out;
+}
+.logo:hover {
+  transform: scale(1.1);
+}
+
+.logo img {
+  height: 50px;
+}
+.header a {
+  text-decoration: none;
+  color: rgb(13, 12, 12);
+  transition: text-shadow 0.3s;
+}
+.header a:hover {
+  text-shadow: 4px 4px 10px rgb(61, 57, 57);
+  opacity: 0.8;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 70%;
+}
+strong {
+  font-weight: bolder;
+  font-size: 2rem;
+}
+
+.prudence,
+.belisaire {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+}
+
+/*------------------------ prudence-----------*/
+
+.couleur-image,
+.anim-image {
+  grid-column: 1/2;
+  grid-row: 1/2;
+  place-self: flex-end;
+  margin: 3%;
+  margin-right: 10%;
+}
+.para {
+  grid-column: 2/3;
+  grid-row: 1/2;
+  place-self: center;
+}
+
+.color-image,
+.beC {
+  z-index: 0;
+}
+.anim-image,
+.beI {
+  transition: transform 0.3s ease-in-out;
+  z-index: 2;
+}
+.anim-image:hover {
+  transform: scale(0.8) rotate(25deg);
+}
+
+/*-----------belisaire-----------*/
+.beI,
+.beC {
+  grid-column: 2/3;
+  grid-row: 1/2;
+  place-self: flex-start;
+  margin: 3%;
+  margin-left: 10%;
+}
+.paraB {
+  grid-column: 1/2;
+  grid-row: 1/2;
+  text-align: right;
+  place-self: center;
+}
+.titreB {
+  align-self: flex-end;
+}
+
+.beI:hover {
+  transform: scale(0.8) rotate(25deg);
+}
+
+/*------------------------------------------*/
+
+.ireland {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  margin-top: 5%;
+  margin-bottom: 3%;
+  flex-wrap: wrap;
+  text-align: center;
+}
+@font-face {
+  font-family: "olivia";
+  src: url("../font/NeverMind/NeverMind-Regular.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "olivia";
+  src: url("../font/NeverMind/NeverMind-Bold.ttf");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@media screen and (max-width: 600px) {
+  * {
+    text-align: center;
+  }
+  .header {
+    font-size: 0.6rem;
+  }
+  .logo {
+    width: 90%;
+    height: auto;
+  }
+  .prudence,
+  .belisaire {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+  .couleur-image,
+  .anim-image,
+  .beI,
+  .beC {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    place-self: center;
+  }
+  .para,
+  .paraB {
+    grid-column: 1/2;
+    grid-row: 2/3;
+    place-self: center;
+    padding: 10px;
+    text-align: center;
+  }
+  .ireland {
+    width: 90%;
+    margin-bottom: 7%;
+  }
+}

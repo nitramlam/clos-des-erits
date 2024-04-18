@@ -1,0 +1,82 @@
+* {
+  font-family: "olivia";
+}
+body {
+  margin: 0;
+  padding: 0;
+  cursor: url("../sourisnoir.png"), auto;
+  background-image: url("carte.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2%;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 900px;
+  max-height: 300px;
+  font-weight: bold;
+}
+.logo {
+  opacity: 100%;
+  transition: transform 0.5s ease-in-out;
+}
+.logo:hover {
+  opacity: 100%;
+  transform: scale(1.1);
+}
+
+.logo img {
+  height: 50px;
+}
+.header a {
+  text-decoration: none;
+  color: rgb(13, 12, 12);
+  transition: text-shadow 0.3s;
+}
+.header a:hover {
+  text-shadow: 4px 4px 10px rgb(61, 57, 57);
+  opacity: 0.8;
+}
+
+.para {
+  display: flex;
+  width: 25%;
+  margin-left: 10%;
+  flex-wrap: wrap;
+  font-size: 1.2rem;
+}
+@font-face {
+  font-family: "olivia";
+  src: url("../font/NeverMind/NeverMind-Regular.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "olivia";
+  src: url("../font/NeverMind/NeverMind-Bold.ttf");
+  font-weight: bold;
+  font-style: normal;
+}
+
+@media screen and (max-width: 600px) {
+  * {
+    text-align: center;
+  }
+  .header {
+    font-size: 0.6rem;
+  }
+  .logo {
+    width: 90%;
+    height: auto;
+  }
+  .para {
+    font-size: 1rem;
+  }
+}

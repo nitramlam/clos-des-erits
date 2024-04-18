@@ -1,0 +1,125 @@
+* {
+  font-family: "olivia";
+}
+
+body {
+  margin: 0;
+  padding: 0;
+
+  background-image: url("fond.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  cursor: url("sourisblanche.png"), auto;
+}
+
+.logo {
+  transition: transform 0.5s ease-in-out;
+}
+
+.logo:hover {
+  transform: scale(1.1);
+}
+.logo[title]::after {
+  transition-delay: 0.001s; /* Réduit le délai à 0.2 seconde */
+}
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2%;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 900px;
+  max-height: 300px;
+  font-weight: bold;
+}
+
+.header a {
+  text-decoration: none;
+  color: white;
+  transition: text-shadow 0.3s;
+}
+
+.header a:hover {
+  text-shadow: 4px 4px 10px rgba(255, 255, 255, 1);
+}
+.button {
+  font-weight: bold;
+}
+.centered-box {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 600px; /* Largeur maximale de la boîte */
+}
+
+.box {
+  font-size: 1.5rem;
+  text-align: center;
+  padding: 20px;
+  width: 40%;
+  height: auto;
+  margin: 0 auto;
+  border-radius: 40px;
+  background: linear-gradient(
+    302deg,
+    rgba(217, 217, 217, 0.2) 17.92%,
+    rgba(217, 217, 217, 0.5) 78.34%
+  );
+  backdrop-filter: blur(2px);
+  opacity: 0.9;
+}
+
+.box a {
+  display: block;
+  margin-bottom: 10px;
+  color: white;
+  border: 1px solid white;
+  border-radius: 50px;
+  padding: 5px 10px;
+  transition: background-color 0.3s;
+}
+
+.box a:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.box p {
+  color: white;
+}
+
+@media screen and (max-width: 600px) {
+  * {
+    text-align: center;
+  }
+  .header {
+    font-size: 0.6rem;
+    gap: 4%;
+  }
+  .logo {
+    width: 20%;
+    height: auto;
+  }
+  .centered-box {
+    left: 30%;
+  }
+  .box {
+    font-size: 0.9rem;
+    width: 50%;
+  }
+}
+@font-face {
+  font-family: "olivia";
+  src: url("font/NeverMind/NeverMind-Regular.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "olivia";
+  src: url("font/NeverMind/NeverMind-Bold.ttf");
+  font-weight: bold;
+  font-style: normal;
+}
