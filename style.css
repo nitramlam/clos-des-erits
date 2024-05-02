@@ -21,9 +21,7 @@ body {
 .logo:hover {
   transform: scale(1.1);
 }
-.logo[title]::after {
-  transition-delay: 0.001s; /* Réduit le délai à 0.2 seconde */
-}
+
 .header {
   display: flex;
   align-items: center;
@@ -39,42 +37,26 @@ body {
 .header a {
   text-decoration: none;
   color: white;
-  transition: text-shadow 0.3s;
 }
 
 .header a:hover {
-  text-shadow: 4px 4px 10px rgba(255, 255, 255, 1);
-}
-.button {
-  font-weight: bold;
-}
-.centered-box {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  max-width: 600px; /* Largeur maximale de la boîte */
+  text-decoration: underline;
 }
 
 .box {
-  font-size: 1.5rem;
-  text-align: center;
-  padding: 20px;
-  width: 40%;
-  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   margin: 0 auto;
-  border-radius: 40px;
-  background: linear-gradient(
-    302deg,
-    rgba(217, 217, 217, 0.2) 17.92%,
-    rgba(217, 217, 217, 0.5) 78.34%
-  );
-  backdrop-filter: blur(2px);
-  opacity: 0.9;
+  width: 70%;
+  font-size: 1.3rem;
 }
-
-.box a {
-  display: block;
+.button {
+  text-align: center;
+  text-decoration: none;
+  width: 100%;
+  font-weight: bold;
   margin-bottom: 10px;
   color: white;
   border: 1px solid white;
@@ -82,13 +64,12 @@ body {
   padding: 5px 10px;
   transition: background-color 0.3s;
 }
+.box p {
+  color: white;
+}
 
 .box a:hover {
   background-color: rgba(255, 255, 255, 0.5);
-}
-
-.box p {
-  color: white;
 }
 
 @media screen and (max-width: 600px) {
@@ -103,12 +84,13 @@ body {
     width: 20%;
     height: auto;
   }
-  .centered-box {
-    left: 30%;
-  }
+
   .box {
     font-size: 0.9rem;
     width: 50%;
+  }
+  .button {
+    padding: 10px;
   }
 }
 @font-face {
