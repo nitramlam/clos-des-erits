@@ -76,6 +76,9 @@ strong {
 .beC {
   z-index: 0;
 }
+.anim-image {
+  margin-right: 15%;
+}
 .anim-image,
 .beI {
   transition: transform 0.3s ease-in-out;
@@ -93,6 +96,10 @@ strong {
   place-self: flex-start;
   margin: 3%;
   margin-left: 10%;
+}
+.beI {
+  margin-left: 20%;
+  margin-top: 7%;
 }
 .paraB {
   grid-column: 1/2;
