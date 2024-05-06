@@ -5,7 +5,6 @@
 body {
   margin: 0;
   padding: 0;
-
   background-image: url("fond.png");
   background-size: cover;
   background-position: center;
@@ -42,34 +41,60 @@ body {
 .header a:hover {
   text-decoration: underline;
 }
-
+main {
+  height: 60vh;
+  margin: 5%;
+}
 .box {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+.box a:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.button {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-  margin: 0 auto;
-  width: 70%;
-  font-size: 1.3rem;
-}
-.button {
-  text-align: center;
+  grid-column: 2/3;
+  grid-row: 2/3;
   text-decoration: none;
-  width: 100%;
+  place-self: start center;
+  width: 70%;
+  height: 20%;
   font-weight: bold;
+  font-size: 1vw;
   margin-bottom: 10px;
   color: white;
   border: 1px solid white;
   border-radius: 50px;
-  padding: 5px 10px;
   transition: background-color 0.3s;
 }
-.box p {
-  color: white;
+.para {
+  grid-column: 3/4;
+  grid-row: 2/4;
+  place-self: center;
+  width: 60%;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  font-size: 0.8vw;
+  margin-left: 20%;
+  margin-top: 20%;
+  z-index: 4;
 }
-
-.box a:hover {
-  background-color: rgba(255, 255, 255, 0.5);
+.fond {
+  grid-column: 3/4;
+  grid-row: 2/4;
+  z-index: 2;
+  place-self: center;
+  margin-left: 20%;
+  margin-top: 10%;
+  width: 70%;
+  transform: rotate(90deg);
 }
 
 @media screen and (max-width: 600px) {
@@ -83,11 +108,6 @@ body {
   .logo {
     width: 20%;
     height: auto;
-  }
-
-  .box {
-    font-size: 0.9rem;
-    width: 50%;
   }
   .button {
     padding: 10px;
