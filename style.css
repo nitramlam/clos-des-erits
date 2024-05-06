@@ -110,7 +110,17 @@ main {
     height: auto;
   }
   .button {
+    font-size: 12px;
+    width: 100%;
     padding: 10px;
+  }
+  .para {
+    font-size: 5px;
+    margin-right: 55%;
+  }
+  .fond {
+    margin-right: 50%;
+    width: 110%;
   }
 }
 @font-face {
