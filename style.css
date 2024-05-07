@@ -31,6 +31,7 @@ body {
   max-width: 900px;
   max-height: 300px;
   font-weight: bold;
+  margin-bottom: 2%;
 }
 
 .header a {
@@ -43,7 +44,6 @@ body {
 }
 main {
   height: 60vh;
-  margin: 5%;
 }
 .box {
   width: 100%;
@@ -61,16 +61,17 @@ main {
   justify-content: center;
   align-items: center;
   grid-column: 2/3;
-  grid-row: 2/3;
+  grid-row: 1/2;
   text-decoration: none;
   place-self: start center;
-  width: 70%;
+  width: 60%;
   height: 20%;
-  font-weight: bold;
+  margin-left: 10%;
+  font-weight: 400;
   font-size: 1vw;
   margin-bottom: 10px;
   color: white;
-  border: 1px solid white;
+  border: 2px solid white;
   border-radius: 50px;
   transition: background-color 0.3s;
 }
@@ -110,17 +111,8 @@ main {
     height: auto;
   }
   .button {
-    font-size: 12px;
-    width: 100%;
-    padding: 10px;
-  }
-  .para {
-    font-size: 5px;
-    margin-right: 55%;
-  }
-  .fond {
-    margin-right: 50%;
-    width: 110%;
+    font-size: 10px;
+    width: 150%;
   }
 }
 @font-face {
