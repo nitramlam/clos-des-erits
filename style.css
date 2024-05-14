@@ -1,18 +1,24 @@
 * {
   font-family: "olivia";
 }
-
+html {
+  height: 100%;
+}
 body {
   margin: 0;
   padding: 0;
+  height: 100%;
+  overflow: hidden;
   background-image: url("fond.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  min-height: 100vh;
   cursor: url("sourisblanche.png"), auto;
 }
-
+.contenu {
+  min-height: 100%;
+  position: relative;
+}
 .logo {
   transition: transform 0.5s ease-in-out;
 }
@@ -43,61 +49,46 @@ body {
   text-decoration: underline;
 }
 main {
-  height: 60vh;
-}
-.box {
-  width: 100%;
-  height: 100%;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
-}
-.box a:hover {
-  background-color: rgba(255, 255, 255, 0.5);
-}
-
-.button {
   display: flex;
   justify-content: center;
   align-items: center;
-  grid-column: 2/3;
-  grid-row: 1/2;
+}
+.button {
   text-decoration: none;
-  place-self: start center;
-  width: 60%;
-  height: 20%;
-  margin-left: 10%;
-  font-weight: 400;
-  font-size: 1vw;
-  margin-bottom: 10px;
+}
+.linkP {
   color: white;
+  text-decoration: none;
   border: 2px solid white;
   border-radius: 50px;
-  transition: background-color 0.3s;
+  padding: 5px;
+  transition: background-color 0.3s ease-in-out;
 }
-.para {
-  grid-column: 3/4;
-  grid-row: 2/4;
-  place-self: center;
-  width: 60%;
-  color: rgb(0, 0, 0);
-  text-align: center;
-  font-size: 0.8vw;
-  margin-left: 20%;
-  margin-top: 20%;
-  z-index: 4;
+.linkP:hover {
+  background-color: rgba(255, 255, 255, 0.5);
 }
-.fond {
-  grid-column: 3/4;
-  grid-row: 2/4;
-  z-index: 2;
-  place-self: center;
-  margin-left: 20%;
-  margin-top: 10%;
-  width: 70%;
-  transform: rotate(90deg);
+footer {
+  width: 80%;
+  height: 60%;
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
 }
-
+.arbre {
+  margin-top: 55%;
+  width: 100%; /* Empêche l'image de dépasser la largeur du conteneur */
+  height: auto;
+  place-self: center end;
+  align-self: end; /* Pour le positionner en bas */
+  justify-self: center; /* Pour le centrer horizontalement */
+  grid-column: 3/ 4;
+  grid-row: 3 / 4;
+  margin-bottom: 0;
+}
 @media screen and (max-width: 600px) {
   * {
     text-align: center;
@@ -110,9 +101,9 @@ main {
     width: 20%;
     height: auto;
   }
-  .button {
-    font-size: 10px;
-    width: 150%;
+  .arbre {
+    grid-column: 1/4;
+    grid-row: 1/4;
   }
 }
 @font-face {
