@@ -79,7 +79,6 @@ footer {
   grid-template-rows: 1fr 1fr 1fr;
 }
 .arbre {
-  margin-top: 55%;
   width: 100%; /* Empêche l'image de dépasser la largeur du conteneur */
   height: auto;
   place-self: center end;
@@ -87,7 +86,7 @@ footer {
   justify-self: center; /* Pour le centrer horizontalement */
   grid-column: 3/ 4;
   grid-row: 3 / 4;
-  margin-bottom: 0;
+  margin-bottom: -10px;
 }
 @media screen and (max-width: 600px) {
   * {
@@ -102,7 +101,7 @@ footer {
     height: auto;
   }
   .arbre {
-    grid-column: 1/4;
+    grid-column: 2/5;
     grid-row: 1/4;
   }
 }
