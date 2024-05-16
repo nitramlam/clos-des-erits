@@ -2,12 +2,12 @@
   font-family: "olivia";
 }
 html {
-  height: 100vh;
+  height: 100%;
 }
 body {
   margin: 0;
   padding: 0;
-
+  height: 100%;
   overflow: hidden;
   background-image: url("fond.png");
   background-size: cover;
@@ -15,7 +15,10 @@ body {
   background-repeat: no-repeat;
   cursor: url("sourisblanche.png"), auto;
 }
-
+.contenu {
+  min-height: 100%;
+  position: relative;
+}
 .logo {
   transition: transform 0.5s ease-in-out;
 }
@@ -31,27 +34,20 @@ body {
   gap: 2%;
   padding: 20px;
   margin: 20px auto;
-  max-width: 1200px;
-  max-height: 600px;
+  max-width: 900px;
+  max-height: 300px;
   font-weight: bold;
   margin-bottom: 2%;
 }
 
 .header a {
-  font-size: 1.4em;
   text-decoration: none;
   color: white;
-}
-.logo {
-  /* Augmentation de la taille du logo */
-  width: 300px; /* Augmentez la valeur selon vos besoins */
-  height: auto;
 }
 
 .header a:hover {
   text-decoration: underline;
 }
-
 main {
   display: flex;
   justify-content: center;
@@ -63,18 +59,17 @@ main {
 .linkP {
   color: white;
   text-decoration: none;
-  border: 4px solid white;
+  border: 2px solid white;
   border-radius: 50px;
-  padding: 10px;
+  padding: 5px;
   transition: background-color 0.3s ease-in-out;
-  font-size: 2rem;
 }
 .linkP:hover {
   background-color: rgba(255, 255, 255, 0.5);
 }
 footer {
   width: 80%;
-  height: 40%;
+  height: 60%;
   position: absolute;
   bottom: 0px;
   left: 50%;
@@ -84,14 +79,13 @@ footer {
   grid-template-rows: 1fr 1fr 1fr;
 }
 .arbre {
-  width: 80%;
-  /* Empêche l'image de dépasser la largeur du conteneur */
+  width: 100%; /* Empêche l'image de dépasser la largeur du conteneur */
   height: auto;
   place-self: center end;
   align-self: end; /* Pour le positionner en bas */
   justify-self: center; /* Pour le centrer horizontalement */
-  grid-column: 1/ 4;
-  grid-row: 1 / 4;
+  grid-column: 3/ 4;
+  grid-row: 3 / 4;
   margin-bottom: -10px;
 }
 @media screen and (max-width: 600px) {
@@ -107,7 +101,8 @@ footer {
     height: auto;
   }
   .arbre {
-    width: 200%;
+    grid-column: 2/5;
+    grid-row: 1/4;
   }
 }
 @font-face {
