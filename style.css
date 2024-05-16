@@ -68,6 +68,7 @@ main {
   background-color: rgba(255, 255, 255, 0.5);
 }
 footer {
+  margin-top: 20px;
   width: 80%;
   height: 60%;
   position: absolute;
@@ -84,8 +85,8 @@ footer {
   place-self: center end;
   align-self: end; /* Pour le positionner en bas */
   justify-self: center; /* Pour le centrer horizontalement */
-  grid-column: 3/ 4;
-  grid-row: 3 / 4;
+  grid-column: 1/ 4;
+  grid-row: 1 / 4;
   margin-bottom: -10px;
 }
 @media screen and (max-width: 600px) {
@@ -101,8 +102,7 @@ footer {
     height: auto;
   }
   .arbre {
-    grid-column: 2/5;
-    grid-row: 1/4;
+    width: 200%;
   }
 }
 @font-face {
