@@ -87,6 +87,7 @@ footer {
   justify-self: center; /* Pour le centrer horizontalement */
   grid-column: 1/ 4;
   grid-row: 1 / 4;
+  margin-left: 50%;
   margin-bottom: -10px;
 }
 @media screen and (max-width: 600px) {
